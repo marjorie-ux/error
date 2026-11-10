@@ -274,11 +274,11 @@ function toggleMusic() {
     if (song.paused) {
         song.play()
             .then(() => {
-                button.textContent = "❚❚ Pause Music";
+                button.textContent = "Ⅱ Pause Music";
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error("Music error:", error);
-                alert("Unable to play music. Please check the MP3 file.");
+                alert("Unable to play music. Please try again.");
             });
     } else {
         song.pause();
