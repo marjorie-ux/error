@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 error</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BACKGROUND DECORATION -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="brand" onclick="showView('home'); return false;">
+            ♡ WEBSITE NI BOSS
+        </a>
+
+        <button class="menu-button" type="button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation">☰</button>
+
+        <nav id="navigation">
+            <button onclick="showView('home')">Home</button>
+            <button onclick="showView('story')">Story</button>
+            <button onclick="showView('timeline')">The story</button>
+            <button onclick="showView('letter')">Letter</button>
+            <button onclick="showView('final')">Surprise</button>
+            <button onclick="showWish()">Open a Wish</button>
+
+            <!-- UPDATED: Opens the Secret Vault first -->
+            <button onclick="revealSecret()">Unlock</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section class="view active" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    WELCOME TO YOUR WEBSITE BOSSBOSSINGGG
+                </span>
+
+                <h1>
+                    In a world full of dinosaurs,
+                    <br>
+                    <em>I'm glad I found you, my Jurassic.</em>
+                    <h3>(unsa daw? HAHHA)</h3>
+                </h1>
+
+                <p>
+                    One month of us, love. And countless memories still waiting
+                    to happen. 
+                    <br>
+                    (eme HAHAHAHAHA)
+                </p>
+
+                
+                <div class="hero-decoration">
+                    <span>✿</span>
+                    <span>♡</span>
+                    <span>✧</span>
+                </div>
+
+                <p class="small-note">
+                    Made with love judni langga, especially sa imoha :>>.
+                    <br>
+                    wala lang, ganahan lang ko himoan ka ani para maggamit sadni 
+                    akong skills HAHHA
+                    <br>
+                    pero bitaw sagdi sani akong kajejemon ron, mwaapss
+                    <p>hago²on sa tka ron, bahala ka. iloveyahhh</p>
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button onclick="showView('story')" class="primary-button">
+                       click this, love (enjoyyy HAHA) ♡
+                    </button>
+
+                    <button onclick="showView('letter')" class="secondary-button">
+                        Letter para's imoha pero aysa ni i-click
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- OUR STORY -->
+        <section class="view" id="story">
+
+            <div class="section-container">
+
+                <span class="eyebrow">CHAPTER 01</span>
+
+                <h2>
+                    How our little story <em>began.</em>
+                </h2>
+
+                <p class="section-description">
+                    Who would have thought that something unexpected
+                    could become one of the sweetest parts of our lives, diba?
+                </p>
+
+                <div class="story-card">
+
+                    <div class="story-icon">♡</div>
+
+                    <h3>It started unexpectedly jud, naparabang.</h3>
+
+                    <p>
+                    
+                        Nag try raman unta ko atong popup ba kung unsa to
+                        pero wako nag-expect nga didto na diay nako makit-an 
+                        akong the one (eyyHAHHA).  
+                        <br>
+                        literal na "so suddenly, i'm inlove with a stranger" jud.
+                    </p>
+                    <br>
+                    <p>
+                        What started as something ordinary became
+                        something I never expected to treasure this much.
+                    </p>
+
+                    <div class="story-ending">
+                        And thankful ko love that it happened. ♡
+                      
+                    </div>
+
+                </div>
+
+                <button onclick="showView('timeline')" class="primary-button">
+                   Continue love →
+                </button>
+
+                <button onclick="showView('home')" class="back-button">
+                    ← Back Home
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- MEMORIES -->
+        <section class="view" id="memories">
+
+            <div class="section-container">
+
+                <span class="eyebrow">CHAPTER 02</span>
+
+                <h2>
+                    Little moments, <em>big feelings.</em>
+                </h2>
+
+                <p class="section-description">
+                    Every picture holds a memory.
+                    Every memory holds a piece of us.
+                </p>
+
+                <div class="memory-grid">
+<div class="memory-card" onclick="openMemory(this)">
+    <img src="images/photo1.jpg" alt="Memory 1">
+    <div class="memory-overlay">
+        <p>Our little moment ♡</p>
+    </div>
+</div>
+
+<div class="memory-card" onclick="openMemory(this)">
+    <img src="images/photo2.jpg" alt="Memory 2">
+    <div class="memory-overlay">
+        <p>A little reminder of you ♡</p>
+    </div>
+</div>
+
+<div class="memory-card" onclick="openMemory(this)">
+    <img src="images/photo3.jpg" alt="Memory 3">
+    <div class="memory-overlay">
+        <p>Something worth keeping ♡</p>
+    </div>
+</div>
+                    
+              <div class="memory-card" onclick="openMemory(this)">
+    <img src="images/photo4.jpg" alt="Our little moment">
+    <div class="memory-overlay">
+        <p>Our little moment ♡</p>
+    </div>
+</div>
+
+                </div>
+                <button onclick="showView('timeline')" class="primary-button">
+                    See Our Timeline →
+                </button>
+
+                <button onclick="showView('home')" class="back-button">
+                    ← Back Home
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="view" id="timeline">
+
+            <div class="section-container">
+
+                <span class="eyebrow">CHAPTER 02</span>
+
+                <h2>
+                    Atong story <em>man dawni.</em> <p>(aybasta HAHA)</p>
+                    <p>(ayaw na'g basaha love kay mahago raka HAHAHA)</p>
+                </h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot">♡</span>
+                        <div>
+                            <small> THE BEGINNING</small>
+                            <h3>unexpected encounter</h3>
+                            <p>that moment nga nag-try ko'g voice match sa popup and there's
+                                someone nga akong naka-talk nga ang name kay "Ace" (ganda diba? nya akong name kay "dinasaur" (wrong spelling pajud HAHHA)).
+                                wanako'y masulti, basta mao nana sya
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot">♡</span>
+                        <div>
+                            <small>GETTING CLOSER (closer, closerrr, come closer to meee (by Gehlee Dangca)</small>
+                            <h3>Our 'lil conversations</h3>
+                            <p>
+                                so here, after that encounter. wako nag-expect nga mag chat² ta kay mostly
+                                man gud sakong naka-talk kay wala ra, after mag ila-ila sa call
+                                goodbye na dayon, diba?. abi gani nako'g pareha sadka's uban nga mawa ra'g kalit. 
+                                
+                                until nakig-streak naka's tiktok. nya mao to, mao nato HAHHA. after that, nag messenger
+                                na dayon ang mga dinosaurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot">♡</span>
+                        <div>
+                            <small>A SPECIAL MOMENT</small>
+                            <h3>The unexpected courtship ni Ace a.k.a. Jurassic ft. Ralph </h3>
+                            <p>
+                                wako nag-expect love nga nagkagusto ka sakoa. at first diba wa tka gisugot (kinsa gud pud ang mosugot anang
+                                bag-o pa gani nag-ila nanguyab na dayon HAHHA). mao to, wapa tka gisugot ato nga time kay want pa nako nga 
+                                mailhan ka, not until nabalhin tas tiktok, abi ba nako'g mag streak rata didtoa ba
+                                pero kadugayan, on October 10 (11pm) gisulti na nimo ang mahiwagang salita (emeHAHHA). wako kasabot sakong gibati ato 
+                                love HAHA, dugay kaayo nakatubag ang dino kay nag process pa akong hunahuna kay lagi nagduhaduha pa basin unsa'y mahitabo
+                                or what after that, pero ana nalang kos akong self nga i'd rather take the risk than lose a chance (ay basta), the chance nga makaila pa tka deeply(wala ra, inlove naman ang dino kang jurassic). 
+                                si Lord na ang bahala, that's why, i answered "YES" at 12am , October 11 (am i right?) basta mao nana. and here i am, thankful nga ikaw ang gipili sakong heart, mwaaps
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot">♡</span>
+                        <div>
+                            <small>FIRST MONTH of the prehistoric era where dinosaurs exist (ha? hakdog)</small>
+                            <h3>One month of us</h3>
+                            <p>here we are, from ettt to love, babyy, and langga. Our relationship as a couple miabot ug month nga puno sa pagmahal (pagmahal?), gi-amigas na hapit (charrlang) and i'm thankful 
+                                nga ikaw ang fist nga nakapa-experience nako ani. But this is only the beginning satong story. i hope nga this story magpadayon pa hangtod sa hangtod.</p>
+                            <p>thankyou and iloveyou lovelovee</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button onclick="showView('letter')" class="primary-button">
+                    Okay next →
+                </button>
+
+                <button onclick="showView('home')" class="back-button">
+                    ← Back Home
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- LOVE LETTER -->
+        <section class="view" id="letter">
+
+            <div class="section-container">
+
+                <span class="eyebrow">CHAPTER 03</span>
+
+                <h2>
+                    A little letter <em>just for you, langga.</em>
+                </h2>
+
+                <div class="envelope" id="envelope"
+                     onclick="openLetter()">
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-content">
+                        <span>♡</span>
+                        <p>Open it, love.</p>
+                        <em>take your time, mwaaps</em>
+                   
+                    </div>
+
+                </div>
+
+                <div class="letter-paper" id="letterPaper" hidden>
+
+                    <span class="eyebrow">TO MY FAVORITE PERSON</span>
+
+                    <h3>hiii myloveebabyylangga,</h3>
+
+                    <p>Happy monthsary, mahhbabyyy</p>
+                    
+                    <p>
+                        wako kabalo love unsaon ni pagsugod pero sige padayon:>.
+                    </p>
+                    <p>
+                        it's my first time doing this, btw.
+                    </p>
+                        want lang nako love nga makabalo ka how grateful i am nga 
+                        miabot ka sakong life po. 
+                      
+                    <p>
+                        kung swerte ka sakoa mas swerte ko nimo, it's because you treat me so well love
+                        and never nimo ginapa-feel sakoa nga wala rako sa imoha, even though layo ta's usag-usa po.
+                        you still make me feel loved kumbaga 
+                        
+                       
+                    </p>
+                    <p>
+                        grabe ba, one month naman diay no since i said that "yes" sa imoha.
+                        wako kahibaw kung unsa'y mahitabo sa future pero i'm really happy jud
+                        nga ikaw love. i know nga dili sayon atong situation pero laban lang. One day, in God's grace hoping nga mag-uban nata.
+                        
+                        
+                    </p>
+                    <p>
+                        thankyou love, for choosing me and for loving me genuinely po. thankyou sa pagsabot sakoa
+                        bisan usahay lisod sabton(djklang). gahi pajud sultihan, diba love? HAHHA sorrysorry. thankyou for everything nalang sa imong nabuhat since day one. (naparabang, nag-goodbye na 'yan sha)
+                        djklang love², thankful lang ko sa imoha po kay bisan tuod ug layo ka, gina pa-feel nimo sakoa nga duol raka.
+                        maong iloveyoutalaga mwaaps.
+                    </p>
+
+                    <p>
+                        I hope po nga we continue choosing each other,
+                        understanding each other, and growing
+                        together despite the distance and mga pagsulay.
+                    </p>
+                    <p>
+                        lovee, if ever man gali nga naa ko'y pagkulang sa imoha or naa ko'y mabuhat nga mali po
+                        ,please sultihi ko love ha. i'm not perfect po maong i'd appreciate if isulti nimo sakoa para makabalo sadko. 
+                    </p>
+                    <p>
+                        dili ko showy nga 
+                        person love pero always remember nga i will always love you and choose you no matter what and where life takes us (aywaw ingles yarn sha)
+                        
+                    </p>
+                    <p>
+                        diri nalang ngali taman, dina nako tas-on pa kay "no words can explain 
+                        how much i love you man, langga". gisulti lang nako ni tanan kay want lang nako makabalo
+                        ka:>>
+                    </p>
+                    <p>
+                        HAPPY MONTHSARY lovelovee nako, iloveyouusomuchhh po, mwaapss.
+                    </p>
+
+   
+
+                    <h3>Always yours, mahlovee♡</h3>
+
+                </div>
+
+                <button onclick="showView('final')" class="primary-button">
+                    One Last Thing...
+                </button>
+
+                <button onclick="showView('home')" class="back-button">
+                    ← Back Home
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL SURPRISE -->
+        <section class="view" id="final">
+
+            <div class="section-container final-section">
+
+                <span class="eyebrow">YOUR FINAL SURPRISE</span>
+
+                <h2>
+                    Waiittt... <em>there's more.</em>
+                </h2>
+
+                <p>
+                    I prepared a few more little surprises for you.
+                    So that mag enjoy paka ara HAHAHA.
+                </p>
+
+                <!-- FLOWER ANIMATION -->
+                <div class="flower-container" id="flowerContainer">
+
+                    <div class="flower">
+                        <div class="petal p1"></div>
+                        <div class="petal p2"></div>
+                        <div class="petal p3"></div>
+                        <div class="petal p4"></div>
+                        <div class="petal p5"></div>
+                        <div class="flower-center"></div>
+                    </div>
+
+                    <div class="flower-stem"></div>
+
+                </div>
+
+                <button onclick="revealSurprise()" class="primary-button">
+                    Click for a Surprise ♡
+                </button>
+<div class="surprise-message rose-surprise" id="surpriseMessage" hidden>
+
+    <span class="eyebrow">A LITTLE GIFT FOR YOU, love</span>
+
+    <h3>For my lovely Jurassic♡</h3>
+
+    <p class="bouquet-intro">
+        BASTA BOUQUET OF FLOWERS NA SYA (mura la'g flower pot HAHAHAHA)     
+    </p>
+
+    <!-- BOUQUET OF ROSES -->
+    <div class="rose-bouquet">
+        <div class="roses">
+            <span>🌹</span>
+            <span>🌹</span>
+            <span>🌹</span>
+            <span>🌹</span>
+            <span>🌹</span>
+            
+        </div>
+
+        <div class="bouquet-wrap">♡</div>
+    </div>
+
+    <p class="bouquet-message">
+        pasensya kay kana rajud ang makaya sakong powers HAHAHAHAHA. 
+    </p>
+    <p>
+        ILOVEYOU loveee ♡
+        
+    </p>
+
+    <span class="monthsary-message">
+        Happy Monthsaryyyyy (overchh) ♡
+    </span>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player">
+
+        <p>here's a song for you, langga ♡</p>
+        
+<audio id="ourSong" preload="auto" controls>
+    <source src="../our-song.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+        <button
+            type="button"
+            id="musicButton"
+            onclick="toggleMusic()"
+            class="music-button">
+            ▶ Play 
+        </button>
+        <br>
+        <br>
+<em>vm raman unta nako akong ibutang here pero diman ko ganahan maong kana nalang sa:)</em>
+        
+    </div>
+
+</div>
+
+                <!-- SECRET SURPRISE -->
+                <div class="secret-entry">
+                    <p>There might be something else hidden here...</p>
+                    <button id="secretTrigger">
+                        you found something, click it ♡
+                    </button>
+                </div>
+
+                <div class="secret-vault" id="secretVault" hidden>
+
+                    <h3>tadaaaaa (rag tala HAHAHAAHHAA)</h3>
+
+                    <p id="secretNote">
+                        wala ra love, enjoy lang ngara po, mwaapss
+                    </p>
+
+                    <button id="noteButton">
+                         little notes (click, read, close, then click again) ♡
+                    </button>
+
+                    <div class="wish-jar">
+                        <span>♡</span>
+                        <b>Wishes </b>
+                        <button id="wishButton">＋</button>
+                    </div>
+
+                    <p id="wishResult" hidden></p>
+
+                    <!-- SECRET CODE VERIFICATION -->
+                    <div class="secret-code">
+
+                        <label for="secretCode">
+                            Can you unlock one final message?
+                        </label>
+
+                        <input
+                            type="password"
+                            id="secretCode"
+                            placeholder="Enter the secret code"
+                        >
+
+                        <button id="unlockCode" type="button">
+                            Unlock
+                        </button>
+
+                        <p id="codeResult"></p>
+
+                    </div>
+
+                    <!-- THIS APPEARS ONLY AFTER THE CORRECT CODE -->
+                    <div class="locked-note" id="lockedNote" hidden>
+                        
+                        <h2>GALING MO TALAGAA <p>kaya love kita ei,mwaaps</p></h2>
+
+                        <h3>One more thing po...</h3>
+
+                        <p>
+                   
+                            my favorite part love, is dili lang kay we found each other. 
+                            it's that gipili nato nga mga-stay, learn, and grow together po.
+                            
+                        </p>
+
+                        <p>
+                            I hope nga unta more monthsaries to come pa for us. dili lang kay
+                            monthsary gani dapat anniversarry sad and etc. (overrchhh)
+                        </p>
+                        <p>
+                            Stay strong lang us po ah. bisan unsa paman ang mga challenges nga muabot
+                            i hope that we will face it together po. as i've said nga sinugdanan pani 
+                            and daghan pata'g maagian. 
+                        </p>
+                        <p>also love, i'm here lang po nga mag-support nimo as always sa imong mga decision sa life</p>
+                        <p>sakto nana kay makahilak nasad ko HAHAHAHA (oa yarn)</p>
+
+                        <h3>Iloveyouu lovelovee nako, mwaaps ♡</h3>
+
+                    </div>
+
+                </div>
+
+                <button onclick="showView('home')" class="back-button">
+                    Return to the Beginning
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Made with love, for my favorite person. ♡</p>
+        <small>FROM YOUR DINOSAUR</small>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+                
+                
