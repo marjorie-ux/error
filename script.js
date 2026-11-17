@@ -379,7 +379,7 @@ function unlockCode() {
 
     const code = input.value.trim();
 
-    if (code !== "08-11-26") {
+    if (code !== "10-11-26") {
         showMessagePopup(
             "Oops! Not Yet, Love ♡",
             code === ""
